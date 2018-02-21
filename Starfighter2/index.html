@@ -1,0 +1,37 @@
+<!doctype html>
+<html>
+	<head>
+    		<script src="js/phaser.js"></script>
+    		<script src="js/start.js"></script>
+				<script src="js/menu.js"></script>
+				<script src="js/game.js"></script>
+				<script src="js/end.js"></script>
+<link href="https://fonts.googleapis.com/css?family=Orbitron|Righteous" rel="stylesheet">
+    		<style>
+    			body{margin:0}
+    		</style>
+		<script>
+				var game = new Phaser.Game(800, 600, Phaser.CANVAS, "game");
+				game.state.add('Start', gameObject.Start);
+				game.state.add('Menu', gameObject.Menu);
+				game.state.add('Game', gameObject.Game);
+				game.state.add('End', gameObject.End);
+				game.state.start('Start');
+				WebFontConfig = {
+
+    //  'active' means all requested fonts have finished loading
+    //  We set a 1 second delay before calling 'createText'.
+    //  For some reason if we don't the browser cannot render the text the first time it's created.
+  //  active: function() { game.time.events.add(Phaser.Timer.SECOND, createText, this); },
+
+    //  The Google Fonts we want to load (specify as many as you like in the array)
+    google: {
+      families: ['Orbitron']
+    }
+
+};
+		</script>
+    </head>
+    <body>
+    </body>
+</html>

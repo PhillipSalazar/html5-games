@@ -1,0 +1,60 @@
+<html>
+<head>
+<script src="js/phaser.min.js"></script>
+<script src="js/start.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/end.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/vs.js"></script>
+<script src="js/levels/lvl1.js"></script>
+<script src="js/levels/lvl2.js"></script>
+<script src="js/levels/lvl3.js"></script>
+<script src="js/levels/lvl4.js"></script>
+<script src="js/levels/lvl5.js"></script>
+<style>
+#pongz {
+  padding: 0px 0px 0px !important;
+}
+body {
+  background-color: black;
+}
+</style>
+</head>
+<body>
+<script>
+var game = new Phaser.Game(1200,800,Phaser.CANVAS ,'Pongz');
+game.state.add('startz', Startz);
+game.state.add('menuz', Menuz);
+game.state.add('endz', Endz);
+game.state.add('aiz', Aiz);
+game.state.add('vsz', Vsz);
+game.state.add('lvl1', lvl1);
+game.state.add('lvl2', lvl2);
+game.state.add('lvl3', lvl3);
+game.state.add('lvl4', lvl4);
+game.state.add('lvl5', lvl5);
+game.state.start('startz');
+var prePaddlez;
+var preBallz;
+var preScorebarz;
+var player;
+var ai;
+var linez;
+var goal1;
+var goal2;
+var score_for_player;
+var score_for_ai;
+var score1;
+var score2;
+var cursors;
+var ballButton;
+var ballz;
+var rnd;
+var xAI = 1150;
+var player1_up;
+var player1_down;
+var group;
+
+</script>
+</body>
+</html>
